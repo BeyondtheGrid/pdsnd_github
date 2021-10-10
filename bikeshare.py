@@ -29,14 +29,14 @@ def get_filters():
         print('Selected city:', city)
 
         # get user input for month (all, january, february, ... , june)
-    filter_check = input('Would you like to apply a time filter to the data, yes or no? ')
+    filter_check = input('Apply a time filter to the data, yes or no? ').lower()
     while filter_check not in (['yes', 'no']):
-        print('please answer "yes" or "no" if you would like a filter applied to the data: ')
+        print('please answer "yes" or "no" : ')
         filter_check = input('Filter the data, yes or no? ')
 
         #user has confirmed they want to filter, next we will ask them how to filer.
     if filter_check == 'yes':
-        filter_1 = input('Would you like to filter by month, day or both?: ')
+        filter_1 = input.('Would you like to filter by month, day or both? : '),lower()
 
         #this section filters by month and has guardins for invalid inputs
         if filter_1 == 'month':
