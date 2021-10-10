@@ -19,7 +19,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Hello! Let\'s explore some US bikeshare data!\n')
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input('Would you to see data from which city, Chicago, New York City, Washington? ').lower()
@@ -68,7 +68,7 @@ def get_filters():
                 day = input('Which day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?').lower()
     else:
         #Shows the users has selected no filter and selects all months and days.
-        print('No filter selected')
+        print('No filter selected\n')
         month = 'all'
         day = 'all'
     print('-' * 40)
@@ -212,13 +212,13 @@ def user_stats(city_pull):
 
 def display_raw(city_pull):
     """Ask the user if they wants to display the raw data, 5 rows at a time."""
-    raw = input('View raw data?: ')
+    raw = input('View raw data?:\n ')
     if raw.lower() == 'yes' or 'y':
         count = 0
         while True:
             print(city_pull.iloc[count: count+5])
             count += 5
-            ask = input('Next 5 rows?, yes or no :')
+            ask = input('Next 5 rows?, yes or no :\n')
             if ask.lower() != 'yes':
                 break
 
