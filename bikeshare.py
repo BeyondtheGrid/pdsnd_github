@@ -125,7 +125,7 @@ def time_stats(city_pull):
     months = ['january', 'february', 'march', 'april', 'may', 'june']
     month = city_pull['month'].mode()[0]
     print('The most common month is:', month)
-
+    print()
     # display the most common day of week
     day = city_pull['day_of_week'].mode()[0]
     print('The most common weekday is:', day)
@@ -134,7 +134,9 @@ def time_stats(city_pull):
     city_pull['hour'] = city_pull['Start Time'].dt.hour
     pop_hour = city_pull['hour'].mode()[0]
     print('The most common start hour is:', pop_hour)
+    print()
     print("\nThis took %s seconds." % (time.time() - start_time))
+    print()
     print('-'*40)
 
 def station_stats(city_pull):
@@ -157,6 +159,7 @@ def station_stats(city_pull):
     print()
 
     print("\nThis took %s seconds." % (time.time() - start_time))
+    print()
     print('-'*40)
 
 def trip_duration_stats(city_pull):
