@@ -38,7 +38,7 @@ def get_filters():
     if filter_check == 'yes':
         filter_1 = input('Would you like to filter by month, day or both?: ')
 
-        #this section filters by month and has guardins for invalid inputs
+        #this section filters by month and has guardians for invalid inputs
         if filter_1 == 'month':
             month = input('Which month : January, February, March, April, May, or June?').lower()
             day = 'all'
@@ -47,7 +47,7 @@ def get_filters():
                 month = input('Which month : January, February, March, April, May, or June?').lower()
                 day = 'all'
 
-        #This sections filters by day and has guardins for invalid inputs
+        #This sections filters by day and has guardians for invalid inputs
         elif filter_1 == 'day':
             day = input('Which day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?').lower()
             month = 'all'
@@ -56,7 +56,7 @@ def get_filters():
                 day = input('Which day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?').lower()
             month = 'all'
 
-        #This section handles a 'both' filter selction from the user and has guardings for invalid inputs
+        #This section handles a 'both' filter selction from the user and has guardians for invalid inputs
         elif filter_1 == 'both':
             month = input('Which month: January, February, March, April, May, or June?').lower()
             while month not in (month_key):
