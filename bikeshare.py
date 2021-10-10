@@ -19,7 +19,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Hello! Let\'s explore some US bikeshare data!\n')
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input('Would you to see data from which city, Chicago, New York City, Washington? ').lower()
@@ -29,14 +29,14 @@ def get_filters():
         print('Selected city:', city)
 
         # get user input for month (all, january, february, ... , june)
-    filter_check = input('Would you like to apply a time filter to the data, yes or no? ')
+    filter_check = input('Apply a time filter to the data, yes or no? ').lower()
     while filter_check not in (['yes', 'no']):
-        print('please answer "yes" or "no" if you would like a filter applied to the data: ')
+        print('please answer "yes" or "no" : ')
         filter_check = input('Filter the data, yes or no? ')
 
         #user has confirmed they want to filter, next we will ask them how to filer.
     if filter_check == 'yes':
-        filter_1 = input('Would you like to filter by month, day or both?: ')
+        filter_1 = input.('Would you like to filter by month, day or both? : '),lower()
 
         #this section filters by month and has guardians for invalid inputs
         if filter_1 == 'month':
@@ -68,7 +68,7 @@ def get_filters():
                 day = input('Which day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?').lower()
     else:
         #Shows the users has selected no filter and selects all months and days.
-        print('No filter selected')
+        print('No filter selected\n')
         month = 'all'
         day = 'all'
     print('-' * 40)
@@ -215,13 +215,13 @@ def user_stats(city_pull):
 
 def display_raw(city_pull):
     """Ask the user if they wants to display the raw data, 5 rows at a time."""
-    raw = input('View raw data?: ')
+    raw = input('View raw data?:\n ')
     if raw.lower() == 'yes' or 'y':
         count = 0
         while True:
             print(city_pull.iloc[count: count+5])
             count += 5
-            ask = input('Next 5 rows?, yes or no :')
+            ask = input('Next 5 rows?, yes or no :\n')
             if ask.lower() != 'yes':
                 break
 
